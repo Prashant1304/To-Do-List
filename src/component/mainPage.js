@@ -46,23 +46,32 @@ import "./mainPage.css"
     return(
         <div>
             <div>
-                <p>You Have {this.state.valueData.length} To Do List</p> 
-                <input placeholder="Add Task" value={this.state.value} onChange={this.handlechange} ></input>
+                <p className="task-length">You Have {this.state.valueData.length} Task</p> 
+            </div>
+            
+            <div className="task-middle">
+                <input style={{width:"690px"}} placeholder="Task Name" value={this.state.value} onChange={this.handlechange} ></input>
                 <button onClick={this.handleSubmit}  >Add Item </button>
             </div>
         
-            <div>
+            <div className="task-name">
                 {this.state.valueData.map((x,y)=>{
-                   return <div key={y}> <li  onClick={this.handleDone} className="one">{x}
-                   <button onClick={()=>{ this.handleDelete(y)}}>&#x2613;</button>
-                   <button onClick={()=>{this.handleEdit(x,y)}}>&#x270E;</button>
-                   </li>  
-                   </div>
+                   return <div className="task-all" key={y}>
+                                <p className="task-data">
+                                      <li  onClick={this.handleDone} className="one">
+                                            {x}
+                                            <button className="task-data-btn" style={{color:"red",backgroundColor:"white",border:"none"}} onClick={()=>{ this.handleDelete(y)}}>&#x2613;</button>
+                                            <button className="task-data-btn" style={{color:"blue",backgroundColor:"white",border:"none"}} onClick={()=>{this.handleEdit(x,y)}}>&#x270E;</button>
+                                     </li>  
+                                </p>
+                            </div>
                 })}
             </div>
 
-            <div>
-                <button onClick={this.handleClearAll}>CLEAR</button>
+            <div className="task-clear-all">
+                <div>
+                    <button style={{color:"green",backgroundColor:"white",border:"none"}} onClick={this.handleClearAll}>CLEAR</button>
+                </div>
             </div>
         </div>
      

@@ -1,3 +1,39 @@
-.done{
+.done {
     text-decoration-line:line-through;
 }
+
+.task-length {
+    text-align: center;
+}
+
+.task-middle {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;    
+}
+
+.task-name { 
+    padding-left: 200px;
+}
+
+.task-clear-all {
+    display: flex;
+    position: relative;
+    top: 156px;
+    justify-content: center;
+    align-items: flex-end;
+    flex-flow: wrap;
+}
+
+.task-data-btn {
+    position: relative;
+    left: 599px;
+}
+
+.task-data {
+    font-family: sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+}
+
