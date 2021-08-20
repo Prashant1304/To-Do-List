@@ -37,3 +37,14 @@
     flex-wrap: wrap;
 }
 
+@media screen and (max-width: 600px) {
+   .task-name {
+      padding: 20px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+   .task-data-btn {
+    position: relative;
+    left: 220px;
+    }
+  }
